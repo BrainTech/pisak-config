@@ -1,0 +1,4 @@
+grubość_linii
+kolor
+nachylenie
+punkt

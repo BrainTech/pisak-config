@@ -1,4 +1,4 @@
-#*Polish Integrative System of Alternative Communication*
+#*PISAK CONFIGURATION FILES*
 ## Site
 
 http://pisak.org

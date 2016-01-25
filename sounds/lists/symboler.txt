@@ -1,0 +1,14 @@
+"automat"
+"funkcje"
+"następna strona"
+"nowy"
+"poprzednia strona"
+"przeczytaj" - zeby roznilo sie od wczytaj
+"skasuj"
+"tablica"
+"wczytaj"
+"w lewo"
+"w prawo"
+"wyjście"
+"zapisz"
+

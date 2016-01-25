@@ -1,0 +1,40 @@
+wszystkie speller sounds +
+
+"dalej"|
+
+"mój blog"
+
+"ulubione"|
+"inne blogi"
+"panel startowy"|
+"o mnie"
+"nowy post"
+"automat"|
+"nastepna strona"|
+"wybierz post"
+"wybierz blog"
+"wybierz album"|
+"wybierz zdjęcie"|
+"strona tytułowa"
+"edytuj zdjecie"
+"edytuj opis"
+
+"edytuj post"
+
+"skasuj post"
+
+"w gore"|
+"w dół"|
+"następny post"
+"poprzedni post"
+
+"komentuj post"
+"akceptuj tytuł"
+"akceptuj post"
+"akceptuj opis"
+"akceptuj"
+"opublikuj post"
+"biblioteka"|
+"album"|
+"pokaz slajdów"
+"powrót"|
