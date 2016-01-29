@@ -1,0 +1,151 @@
+[
+    {
+        "id": "main",
+        "type": "PisakScanningGroup",
+	    "strategy": {
+                        "id": "main_group_strategy",
+                        "type": "PisakRowStrategy"
+                    },
+        "children": [
+                        "main_box", "background_box"
+                    ]
+    },
+    {
+        "id": "background_box",
+        "type": "PisakBackgroundPattern",
+        "pattern": "gradient",
+        "rgba": "94, 188, 188, 255",
+        "background-color": "rgba(188, 236, 236, 255)",
+        "x-expand": true,
+        "y-expand": true
+    },
+    {
+        "id": "pop_up_scanning_group",
+        "type": "PisakScanningGroup",
+        "x-expand": true,
+        "y-expand": true,
+        "background-color": "rgba(0, 0, 0, 0.4)",
+        "reactive": true,
+        "scanning-hilite": true,
+        "strategy": {
+                        "type": "PisakRowStrategy"
+                    },
+        "children": ["pop_up_box", "pop_up_background"]
+    },
+    {
+        "id": "pop_up_background",
+        "type": "PisakBackgroundPattern",
+        "background-color": "rgba(216, 244, 244, 255)",
+        "ratio-width": 0.8,
+        "ratio-height": 0.8
+    },
+    {
+        "id": "pop_up_box",
+        "type": "PisakSpellerPopUp",
+        "target": "text_box",
+        "row-count": 3,
+        "column-count": 3,
+        "background-scene": "main",
+        "orientation": "vertical",
+        "ratio-margin-top": 0.1,
+        "ratio-margin-bottom": 0.1,
+        "ratio-margin-left": 0.1,
+        "ratio-margin-right": 0.1,
+        "ratio-spacing": 0.07,
+        "tile-ratio-height": 0.1,
+        "tile-ratio-width": 0.2,
+        "children": ["pop_up_space", "pop_up_header"]
+    },
+    {
+        "id": "pop_up_header",
+        "type": "ClutterText",
+        "font-name": "Kelson Sans light 30",
+        "color": "rgba(65, 139, 138, 255)",
+        "line-alignment": "center"
+    },
+    {
+        "id": "pop_up_space",
+        "type": "PisakBoxLayout",
+        "ratio-spacing": 0.01171,
+        "orientation": "vertical"
+    },
+    {
+	"id": "main_box",
+	"type": "PisakBoxLayout",
+        "x-align": "start",
+        "x-expand": true,
+        "y-expand": true,
+        "background-scene": "main",
+        "ratio_margin_top": 0.0336,
+        "ratio_margin_bottom": 0.336,
+        "ratio_margin_left": 0.0211,
+        "ratio_margin_right": 0.0211,
+        "ratio_spacing": 0.0001,
+        "orientation": "vertical",
+        "children": [
+                        "button_box", "text_box"
+                    ]
+    },
+    {
+	"id": "text_box",
+	"type": "MxLabel",
+        "color": "rgba(75, 149, 148, 255)",
+        "font-name": "Kelson Sans light 30",
+	"style-class": "PisakBudzikLabel",
+	"text": " "
+    },
+    {
+        "id": "button_box",
+        "type": "PisakBoxLayout",
+        "x-align": "start",
+        "x-expand": true,
+        "y-expand": true,
+        "ratio_margin_top": 0.09,
+        "ratio_margin_bottom": 0.336,
+        "ratio_margin_left": 0.0111,
+        "ratio_margin_right": 0.0211,
+        "ratio_spacing": 0.04,
+        "orientation": "horizontal",
+        "children": [
+                        "button_B", "button_A"
+                    ]
+    },
+    {
+        "id": "button_A",
+        "type": "PisakButton",
+        "style-class": "PisakBudzikButtonA",
+        "text": " ",
+        "x-align": "middle",
+        "y-align": "middle",
+        "ratio-width": 0.46,
+        "ratio-height": 0.6,
+        "icon-size": 120,
+        "icon-name": "yes",
+	"signals": [
+                       {
+                           "name": "clicked",
+                           "handler": "budzik/answer_yes",
+                           "object": "text_box"
+                       }
+                   ]
+    },
+    {
+        "id": "button_B",
+        "type": "PisakButton",
+        "style-class": "",
+        "text": " ",
+        "x-align": "middle",
+	"y-align": "end",
+        "ratio-width": 0.44,
+        "ratio-height": 0.6,
+        "icon-size": 140,
+        "icon-name": "no",
+	"signals": [
+                       {
+                           "name": "clicked",
+                           "handler": "budzik/answer_no",
+                           "object": "text_box"
+                       }
+                   ]
+    }
+]
